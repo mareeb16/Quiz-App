@@ -1,0 +1,148 @@
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background: linear-gradient(135deg, #182848, #4b6cb7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+section{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(36, 59, 85, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  width: 380px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+section.active{
+  display: flex;
+}
+
+h2{
+  margin-bottom: 15px;
+  color: #00e6b8;
+}
+
+.input-group input{
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: #2c3e50;
+  color: #fff;
+}
+
+button{
+  background: #00e6b8;
+  color: #182848;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+button:hover{
+  background: #00bfa6;
+  transform: scale(1.05);
+}
+
+ul{
+  list-style: none;
+  margin-top: 15px;
+  width: 100%;
+}
+
+ul li{
+  background: #2c3e50;
+  margin: 6px 0;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: left;
+}
+
+ul li:hover{
+  background: #3b4a5a;
+}
+.correctAns{
+  background: #27ae60 !important;
+}
+
+.wrongAns {
+  background: #e74c3c !important;
+}
+
+.disableli {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.result {
+  text-align: center;
+}
+.circular-progress{
+  position: relative;
+  height: 120px;
+  width: 120px;
+  background: conic-gradient(#182848 0deg, #ededed 0deg);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 25px auto;
+}
+
+.circular-progress::before{
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: #243b55;
+  border-radius: 50%;
+}
+
+.progress-value{
+  position: relative;
+  font-size: 22px;
+  font-weight: bold;
+  color: #00e6b8;
+}
+
+.pass-para{
+  color: lightgreen;
+  font-weight: bold;
+}
+
+.fail-para{
+  color: #ff7070;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+.formwrapper{
+  display: flex;
+}
+.start, .quizbody, .result {
+  display: none;
+}
